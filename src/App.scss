@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.flex{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header, main{
+  width: 80%;
+  margin: auto;
+}
+
+        // Header
+header{
+  padding: 30px 0px;
+}
+header > img {
+  display: none;
+}
+nav img#menuCloseIcon{
+  display: none;
+}
+nav ul{
+  list-style-type: none;
+}
+nav ul li{
+  float: left;
+}
+nav ul li a{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 15px;
+  color: hsl(236, 13%, 42%);
+}
+
+        //Main
+.first-section{
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.first-section > div{
+  width: 65%;
+  margin-right: 10px;
+
+  img{
+    width: 100%;
+  }
+
+  div{
+    padding: 10px 0px;
+  }
+
+  div > h1{
+    width: 40%;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 0.9;
+  }
+  div > div{
+    width: 45%;
+  }
+  div > div p{
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    color: hsl(236, 13%, 42%);
+  }
+  div > div a{
+    text-decoration: none;
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(5, 85%, 63%);
+    display: inline-block;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+}
+
+
+.first-section > aside{
+  width: 30%;
+  min-width: 200px;
+  background-color: hsl(240, 100%, 5%);
+  padding: 30px 15px;
+
+  h2{
+    color: hsl(35, 77%, 62%);
+  }
+
+  article{
+    color: hsl(36, 100%, 99%);
+    padding: 20px 0px;
+  }
+  article > h3{
+    margin-bottom: 10px;
+  }
+  article > p {
+    font-size: 0.9rem;
+    color: hsl(233, 8%, 79%);
+  }
+}
+
+.second-section{
+  margin: 50px 0px;
+  flex-wrap: wrap;
+
+  article{
+    width: 32%;
+    min-width: 250px;
+    align-items: stretch;
+    margin: 10px 0px;
+  }
+  article > img{
+    width: 30%;
+    min-width: 70px;
+    object-fit: cover;
+  }
+  article > div{
+    width: 65%;
+  }
+  article > div h2{
+    color: hsl(236, 13%, 42%);
+    font-size: 2rem;
+  }
+  article > div h3{
+    margin: 10px 0px;
+    color: hsl(240, 100%, 5%);
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+  article > div p{
+    font-size: 0.9rem;
+    color: hsl(233, 8%, 79%);
+  }
+}
+
+@media screen and (max-width: 90%) {
+  main, header {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .first-section > div, .first-section aside{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  header > img {
+    display: inline-block;
+  }
+  .flex:not(header, .second-section article){
+    flex-direction: column;
+  }
+  .flex:not(header, .second-section article) > *{
+    width: 100%;
+  }
+  header nav{
+    transform: translateX(100%);
+    height: 100vh;
+    position: fixed;
+    background-color: hsl(36, 100%, 99%);
+    top: 0px;
+    right: 0px;
+    width: 70%;
+    padding: 50px 20px;
+
+    transition: transform 0.5s;
+  }
+  header nav.open{
+    transform: translate(0%);
+  }
+  header nav li{
+    float: none;
+    margin: 20px 0px;
+  }
+  nav img#menuCloseIcon{
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+}
