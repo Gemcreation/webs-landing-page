@@ -23,24 +23,24 @@ const Header = () => {
     return(
         
       <header className="flex">
-      <a href='/'>
-        <img src={logo} alt="logo" id="menuIcon"/>
-      </a>
-      {/* style={{display: (deviceWidth < 600) ? (navDisplay ? "block" : "none") : "block" }} */}
-      <nav className={(deviceWidth < 600) ? (navDisplay ? "open" : "") : ""} >
-        
-        <img src={menuCloseIcon} alt="close menu" id="menuCloseIcon" onClick={closeNav} />
-        <ul>
-          <li><a href='#'>Home</a></li>
-          <li><a href='#'>New</a></li>
-          <li><a href='#'>Popular</a></li>
-          <li><a href='#'>Trending</a></li>
-          <li><a href='#'>Category</a></li>
-        </ul>
-      </nav>
+        <a href='/'>
+          <img src={logo} alt="logo" id="menuIcon"/>
+        </a>
+        {/* style={{display: (deviceWidth < 600) ? (navDisplay ? "block" : "none") : "block" }} */}
+        <nav className={(deviceWidth < 600) ? (navDisplay ? "open" : "") : ""} >
+          
+          <img src={menuCloseIcon} alt="close menu" id="menuCloseIcon" onClick={closeNav} />
+          <ul>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>New</a></li>
+            <li><a href='#'>Popular</a></li>
+            <li><a href='#'>Trending</a></li>
+            <li><a href='#'>Category</a></li>
+          </ul>
+        </nav>
 
-      <img src={openIcon} alt="menu" onClick={openNav}/>
-    </header>
+        <img src={openIcon} alt="menu" onClick={openNav}/>
+      </header>
 
     )
 }
